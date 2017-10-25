@@ -1,0 +1,21 @@
+.content {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    margin: 10px 0;
+}
+
+td {
+    width: 25%;
+    text-align: center;
+    padding: 4px;
+}
+
+#button-start {
+    margin: 0 auto;
+    display: block;
+    background: #FF5252;
+    color: white;
+}

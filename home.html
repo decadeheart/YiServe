@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="resource/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/titlebar.css"/>
+    <script src="js/titlebar-base.js"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="titlebar">
+        <div class="button-back" onclick="onBackButtonClick()"><span class="button">修改密码</span></div>
+        <div class="title"><span>翼服务</span></div>
+        <div class="button-right" onclick="onRightButtonClick()"><span class="button">退出</span></div>
+    </div>
+
+    <div class="content">
+
+        <div id="first-section">
+            <img src="img/headpic.png" id="img-home"/>
+
+            <div class="user-info-area">
+                <ul class="list-unstyled">
+                    <li>名称：{{user_name}}</li>
+                    <li>工位：{{work_station}}</li>
+                    <li>积分：{{points}}</li>
+                    <li>排名：{{user_rank}}</li>
+                    <li>累计处理工单：{{total_work_orders}}</li>
+                    <li>累计登录天数：{{total_login_days}}</li>
+                    <li>上次登录时间：{{last_login_time}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divider-gray"></div>
+
+        <div class="bulletin-board-area">
+            <p>公告：</p>
+            <p id="bulletin-board"></p>
+        </div>
+
+        <div class="divider-gray"></div>
+
+        <div class="home-navigation">
+            <a href="order-list.html?status=30" id="new-order">
+                <div>
+                    <img src="img/new_orders.png" class="nav-icon"/>
+                    <span>待接单</span>
+                </div>
+            </a>
+            <a href="order-list.html?status=40">
+                <div>
+                    <img src="img/processing_orders.png" class="nav-icon"/>
+                    <span>处理中</span>
+                </div>
+            </a>
+            <a href="order-list.html?status=50">
+                <div>
+                    <img src="img/completed_orders.png" class="nav-icon"/>
+                    <span>已回复</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="home-navigation">
+            <a href="signal-test.html">
+                <div>
+                    <img src="img/signal_test.png" class="nav-icon"/>
+                    <span>信号测试</span>
+                </div>
+            </a>
+            <a href="network-test.html">
+                <div>
+                    <img src="img/network_test.png" class="nav-icon"/>
+                    <span>网络测试</span>
+                </div>
+            </a>
+            <a href="http://59.175.194.132:12341/PreDealSys2/webAPP/navigate.html">
+                <div>
+                    <img src="img/voice_test.png" class="nav-icon"/>
+                    <span>问题反馈</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="resource/jquery/jquery-3.2.1.min.js"></script>
+<script src="resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="resource/mustache/mustache.min.js"></script>
+<script src="js/mustache-base.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+
+</html>

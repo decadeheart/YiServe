@@ -1,0 +1,42 @@
+body {
+    background: white;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+#title {
+    text-align: center;
+    margin: 25px auto;
+}
+
+#logo-top {
+    width: 35%;
+    margin: 60px auto 0 auto;
+}
+
+#logo-bottom {
+    width: 35%;
+    margin: 30px auto 0 auto;
+}
+
+.form-group label,
+.form-group div {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+}
+
+#button-login {
+    margin: 40px auto 0 auto;
+    padding: 10px;
+    width: 50%;
+    display: block;
+    background: #FF5252;
+    color: white;
+}

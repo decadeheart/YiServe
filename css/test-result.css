@@ -1,0 +1,59 @@
+.content {
+    padding: 10px;
+}
+
+p {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    margin: 10px auto;
+}
+
+td {
+    text-align: center;
+}
+
+.table-title {
+    width: 30%;
+}
+
+.form-table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.input-title {
+    width: 20%;
+    padding: 0;
+}
+
+.required-field:after {
+    content: '*';
+    color: red;
+}
+
+.table-input {
+    width: 100%;
+    padding: 0;
+}
+
+.div-action {
+    text-align: center;
+}
+
+.btn-action {
+    display: inline-block;
+    width: 46%;
+    color: white;
+    margin: 5px;
+}
+
+#button-save {
+    background: green;
+}
+
+#button-submit {
+    background: deepskyblue;
+}

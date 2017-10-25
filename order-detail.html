@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="resource/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/order-detail.css"/>
+    <link rel="stylesheet" href="css/titlebar.css"/>
+    <script src="js/titlebar-base.js"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="titlebar">
+        <div class="button-back" onclick="onBackButtonClick()"><span class="button">返回</span></div>
+        <div class="title"><span>新工单详情</span></div>
+    </div>
+
+    <div class="content">
+        <table id="content_table">
+            <tr class="section_divider"></tr>
+            <tr>
+                <td class="table-title">工单编号</td>
+                <td>{{work_order_id}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">剩余时间</td>
+                <td><span id="time_remain">{{remaining_time_format}}</span></td>
+            </tr>
+            <tr>
+                <td class="table-title">发起时间</td>
+                <td>{{create_time}}</td>
+            </tr>
+            <tr class="section_divider"></tr>
+            <tr>
+                <td class="table-title">类型</td>
+                <td>{{work_order_type}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">故障现象</td>
+                <td>{{pheno}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">投诉地点</td>
+                <td>{{complaint_position}}</td>
+            </tr>
+            <tr class="section_divider"></tr>
+            <tr id="reached_area">
+                <td class="table-title">是否到达现场</td>
+                <td>{{is_reached}}</td>
+            </tr>
+            <tr class="section_divider"></tr>
+            <tr>
+                <td class="table-title">预处理信息</td>
+                <td id="pre_deal_area" onclick="getPreDealInfo()">{{pre_deal_result}}</td>
+            </tr>
+            <tr class="section_divider"></tr>
+            <tr id="test_result_area">
+                <td class="table-title">测试结果</td>
+                <td><a id="test_result"></a></td>
+            </tr>
+        </table>
+
+        <a class="btn" id="button_accept_order">接单</a>
+        <a class="btn" id="button_deal_order">回单</a>
+    </div>
+
+</div>
+
+<script src="resource/jquery/jquery-3.2.1.min.js"></script>
+<script src="resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="resource/mustache/mustache.min.js"></script>
+<script src="js/mustache-base.js"></script>
+<script src="js/order-detail.js"></script>
+
+</body>
+
+</html>

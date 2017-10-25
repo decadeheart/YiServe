@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="resource/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/test-result.css"/>
+    <link rel="stylesheet" href="css/titlebar.css"/>
+    <script src="js/titlebar-base.js"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="titlebar">
+        <div class="button-back" onclick="onBackButtonClick()"><span class="button">返回</span></div>
+        <div class="title"><span>回单信息</span></div>
+    </div>
+
+    <div class="content">
+        <p>投诉记录</p>
+        <table class="table-bordered">
+            <tr>
+                <td class="table-title">投诉问题类型</td>
+                <td id="order-type"></td>
+            </tr>
+            <tr>
+                <td class="table-title">现象描述</td>
+                <td id="order-description"></td>
+            </tr>
+            <tr>
+                <td class="table-title">投诉时间</td>
+                <td id="complaint-time"></td>
+            </tr>
+            <tr>
+                <td class="table-title">投诉地点</td>
+                <td id="complaint-location"></td>
+            </tr>
+        </table>
+
+        <p>测试结果</p>
+        <table class="table-bordered">
+            <tr>
+                <td class="table-title">经纬度</td>
+                <td id="order-lon"></td>
+                <td id="order-lat"></td>
+            </tr>
+            <tr>
+                <td class="table-title">网络制式</td>
+                <td colspan="2" id="network-type"></td>
+            </tr>
+            <tr>
+                <td class="table-title" rowspan="2">信号质量</td>
+                <td id="title-signal-quality-first"></td>
+                <td id="signal-quality-first"></td>
+            </tr>
+            <tr>
+                <td id="title-signal-quality-second"></td>
+                <td id="signal-quality-second"></td>
+            </tr>
+            <tr>
+                <td class="table-title" rowspan="2" id="title-secondary-test-category">网络质量</td>
+                <td id="title-secondary-test-category-first">成功率</td>
+                <td id="secondary-test-value-first"></td>
+            </tr>
+            <tr>
+                <td id="title-secondary-test-category-second">平均时延</td>
+                <td id="secondary-test-value-second"></td>
+            </tr>
+        </table>
+
+        <table class="form-table">
+            <tr>
+                <td class="input-title">
+                    <span class="required-field">解决情况</span>
+                </td>
+                <td>
+                    <select class="form-control table-input" title="input-solution" id="input-solution">
+                        <option disabled selected></option>
+                        <option>未解决（待查修）</option>
+                        <option>未解决（待优化）</option>
+                        <option>未解决（无规划）</option>
+                        <option>未解决（有规划）</option>
+                        <option>已解决</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-title">
+                    <span class="required-field">故障原因</span>
+                </td>
+                <td>
+                    <select class="form-control table-input" title="input-cause" id="input-cause">
+                        <option disabled selected></option>
+                        <option>建设问题</option>
+                        <option>维护问题</option>
+                        <option>优化问题</option>
+                        <option>核心网/计费原因</option>
+                        <option>其他原因</option>
+                        <option>客户原因</option>
+                        <option>终端类原因</option>
+                        <option>无法定位</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="input-title">
+                    预计解决<br>时间
+                </td>
+                <td>
+                    <input class="table-input" id="input-time-expect">
+                </td>
+            </tr>
+            <tr>
+                <td class="input-title">
+                    备注
+                </td>
+                <td>
+                    <textarea class="table-input" rows="3" title="input-note" placeholder="填写备注信息(限 140 字)" id="input-note"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <div class="div-action">
+            <a class="btn btn-action" id="button-save">保存</a>
+            <a class="btn btn-action" id="button-submit">提交</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="resource/jquery/jquery-3.2.1.min.js"></script>
+<script src="resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="resource/mustache/mustache.min.js"></script>
+<script src="js/mustache-base.js"></script>
+<script src="js/test-result.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+.titlebar {
+    height: 48px;
+    background: #607d8b;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.titlebar .button-back {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.titlebar .title {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+}
+
+.titlebar .button-right {
+    right: 0%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.titlebar span {
+    margin: 0 10px;
+    padding: 10px;
+    color: white;
+}
+
+.titlebar .button:active {
+    background: #455a64;
+}
+
+.titlebar span {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                          supported by Chrome and Opera */
+}
+
+.invisible {
+    display: none;
+}

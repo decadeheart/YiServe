@@ -1,0 +1,41 @@
+body,
+table {
+    width: 100%;
+}
+
+.section_divider {
+    height: 14px;
+    background: #EAEAEA;
+}
+
+.table-title {
+    width: 20%;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-align: center;
+}
+
+td {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#time_remain {
+    color: red;
+}
+
+#anchor_test_result {
+    color: lightgray;
+    text-decoration: none;
+}
+
+#button_accept_order,
+#button_deal_order {
+    background: #FF5252;
+    color: white;
+    display: block;
+    margin: 60px auto 0 auto;
+    width: 90%;
+}

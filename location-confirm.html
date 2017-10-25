@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="resource/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/location-confirm.css"/>
+    <link rel="stylesheet" href="css/titlebar.css"/>
+    <script src="js/titlebar-base.js"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="titlebar">
+        <div class="button-back" onclick="onBackButtonClick()"><span class="button">返回</span></div>
+        <div class="title"><span>位置确认</span></div>
+        <div class="button-right" onclick="onRightButtonClick()"><span class="button">下一步</span></div>
+    </div>
+
+    <div class="content">
+        <table id="info-table">
+            <tr class="section_divider"></tr>
+            <tr>
+                <td>投诉地点</td>
+                <td id="complaint_location"></td>
+            </tr>
+            <tr>
+                <td>当前地点</td>
+                <td id="current_location"></td>
+            </tr>
+            <tr>
+                <td>距投诉位置</td>
+                <td id="distance_from_complaint_location"></td>
+            </tr>
+        </table>
+        <div id="map_container"></div>
+    </div>
+
+</div>
+
+<script src="resource/jquery/jquery-3.2.1.min.js"></script>
+<script src="resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="js/location-confirm.js"></script>
+
+</body>
+
+</html>

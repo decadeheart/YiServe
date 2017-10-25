@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="resource/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/network-test.css"/>
+    <link rel="stylesheet" href="css/titlebar.css"/>
+    <script src="js/titlebar-base.js"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="titlebar">
+        <div class="button-back" onclick="onBackButtonClick()"><span class="button">返回</span></div>
+        <div class="title"><span>网络测试</span></div>
+        <div class="button-right" onclick="onRightButtonClick()" style="display: none;"><span class="button">下一步</span></div>
+    </div>
+
+    <div class="content">
+
+        <div class="input-group">
+            <span class="input-group-addon">测试站点</span>
+            <select class="form-control" id="select-websites">
+                <option>http://www.baidu.com</option>
+                <option>http://www.163.com</option>
+                <option>http://www.sina.com</option>
+            </select>
+        </div>
+
+        <table class="table-bordered">
+            <tr>
+                <td></td>
+                <td>测试次数</td>
+                <td>连通率(%)</td>
+                <td>平均时延(ms)</td>
+            </tr>
+            <tr>
+                <td>结果均值</td>
+                <td id="result-times"></td>
+                <td id="result-percentage-connected"></td>
+                <td id="result-average-delay"></td>
+            </tr>
+        </table>
+
+        <table class="table-bordered">
+            <thead>
+            <tr>
+                <td>序号</td>
+                <td>发起时间</td>
+                <td>Ping结果</td>
+                <td>Ping时延(ms)</td>
+            </tr>
+            </thead>
+            <tbody id="tbody-ping-result"></tbody>
+        </table>
+
+        <a id="button-start" class="btn">开始</a>
+
+    </div>
+
+</div>
+
+<script src="resource/jquery/jquery-3.2.1.min.js"></script>
+<script src="resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="resource/mustache/mustache.min.js"></script>
+<script src="js/mustache-base.js"></script>
+<script src="js/network-test.js"></script>
+
+</body>
+
+</html>

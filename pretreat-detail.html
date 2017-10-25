@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="resource/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pretreat-detail.css"/>
+    <link rel="stylesheet" href="css/titlebar.css"/>
+    <script src="js/titlebar-base.js"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="titlebar">
+        <div class="button-back" onclick="onBackButtonClick()"><span class="button">返回</span></div>
+        <div class="title"><span>预处理详情</span></div>
+    </div>
+
+    <div class="content">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th colspan="2"><h3>预处理条目化显示</h3></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="table-title">主要原因：</td>
+                <td>{{main_cause_text}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">次要原因：</td>
+                <td>{{sec_cause_text}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">地理关联小区：</td>
+                <td>{{geogCell}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">关联小区故障：</td>
+                <td>{{alarm}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">关联小区性能：</td>
+                <td>{{BSPerf}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">话单异常事件：</td>
+                <td>{{callEvent}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">话单信号质量：</td>
+                <td>{{callQuality}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">话单接入距离：</td>
+                <td>{{callDis}}</td>
+            </tr>
+            <tr>
+                <td class="table-title">问题详情：</td>
+                <td>{{pre_deal_results}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="resource/jquery/jquery-3.2.1.min.js"></script>
+<script src="resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="resource/mustache/mustache.min.js"></script>
+<script src="js/mustache-base.js"></script>
+<script src="js/pretreat-detail.js"></script>
+
+</body>
+
+</html>

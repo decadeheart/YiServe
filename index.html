@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="resource/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="container">
+
+        <img src="img/yee.jpg" id="logo-top" class="image-responsive center-block"/>
+
+        <h4 id="title">翼服务</h4>
+
+        <form class="form-horizontal">
+
+            <div class="form-group flex-group">
+                <label for="input-phone" class="col-xs-2 control-label">账号：</label>
+                <div class="col-xs-10">
+                    <input id="input-phone" class="form-control input-sm">
+                </div>
+            </div>
+            <div class="form-group flex-group">
+                <label for="input-password" class="col-xs-2 control-label">密码：</label>
+                <div class="col-xs-10">
+                    <input type="password" id="input-password" class="form-control input-sm">
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div class="checkbox pull-left">
+                    <label>
+                        <input type="checkbox" id="checkbox-remember-password"> 记住密码
+                    </label>
+                </div>
+
+                <div class="checkbox pull-right">
+                    <label>
+                        <input type="checkbox" id="checkbox-auto-login"> 自动登录
+                    </label>
+                </div>
+            </div>
+
+            <a id="button-login" class="btn" onclick="onLogin()">登录</a>
+
+        </form>
+
+        <img src="img/dianxin_logo.png" id="logo-bottom" class="image-responsive center-block"/>
+
+    </div>
+
+</div>
+
+<script src="resource/jquery/jquery-3.2.1.min.js"></script>
+<script src="resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
+
+</body>
+
+</html>
