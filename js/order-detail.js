@@ -82,7 +82,6 @@ function loadData() {
 function renderData(data) {
     data = pretreatData(data);
     renderInnerHtml($('#content_table'), data);
-    console.log(data)
 }
 
 function pretreatData(data) {
