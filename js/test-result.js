@@ -100,6 +100,10 @@ function bindData() {
     // 故障原因
     if (orderDetails.problem_type) {
         // TODO 故障原因选择逻辑确定后处理选中问题
+        $('#input-cause option').filter(function(){
+            $(this).removeAttr('selected');
+            return $(this).html() == orderDetails.problem_type
+        }).attr('selected', 'selected')
     }
     // 备注
     if (orderDetails.remark) {

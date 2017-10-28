@@ -1,5 +1,6 @@
 var id = new URL(window.location.href).searchParams.get('id');
 var status = new URL(window.location.href).searchParams.get('status');
+var time = new URL(window.location.href).searchParams.get('time');
 var orderDetails;
 
 $(document).ready(function () {
@@ -58,7 +59,10 @@ function loadData() {
 
     $.post(
         url,
-        {work_order_id: id},
+        {
+            work_order_id: id,
+            create_time:time
+        },
         function (data, status) {
             console.log(data);
             console.log(status);
