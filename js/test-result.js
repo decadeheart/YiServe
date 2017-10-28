@@ -133,6 +133,7 @@ function onPhoneNumberGot(phoneNumber) {
     var userId = localStorage.getItem('user_id');
     var token = localStorage.getItem('token');
     var isHandled = $('#input-solution option:selected').val();
+    var problem_type = $('#input-cause option:selected').val();
 
     var testType = "";
     if (orderDetails.test_type === 2) {
@@ -166,7 +167,7 @@ function onPhoneNumberGot(phoneNumber) {
         work_order_id: wrapEmptyValue(id),
         is_handled: isHandled,
         test_type: wrapEmptyValue(testType),
-        problem_type: wrapEmptyValue("无法定位"), // TODO 故障原因
+        problem_type: problem_type, // TODO 故障原因
         actual_lon: orderDetails.gps_lon,
         actual_lat: orderDetails.gps_lat,
         actual_network: wrapEmptyValue(orderDetails.actual_network),
@@ -188,7 +189,7 @@ function onPhoneNumberGot(phoneNumber) {
             work_order_id: wrapEmptyValue(id),
             is_handled: isHandled,
             test_type: wrapEmptyValue(testType),
-            problem_type: wrapEmptyValue("无法定位"), // TODO 故障原因
+            problem_type: problem_type, // TODO 故障原因
             actual_lon: orderDetails.gps_lon,
             actual_lat: orderDetails.gps_lat,
             actual_network: wrapEmptyValue(orderDetails.actual_network),
