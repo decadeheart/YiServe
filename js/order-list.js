@@ -9,7 +9,7 @@ $(document).ready(function () {
     setListener();
     loadData();
     setTitle(status);
-    console.log($("#selected-area").val();)
+    console.log($("#selected-area").val())
     $("#selected-area").change(function(){
         var selectedArea=$("#selected-area").val();
         console.log(selectedArea)
