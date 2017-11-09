@@ -94,20 +94,19 @@ function change(){
     loadData();   
 }
 var optionHeader =
-"    <div id=\"selected-area\">\n" +
-"<div>\n"
-"       <a>\n "+
+"<form action=\"https://www.baidu.com/\">\n" +
+"    <select id=\"selected-area\">\n" +
+"       <option selected=\"selected\" class=\"form-control table-input\"> "+
 "           全部\n" +
-"       </a>\n"+
-"</div>\n"
+"       </option>\n"+
 "{{#areas}}\n" + 
-"<div>\n"
-"       <a href=\"www.baidu.com\">" +
+"       <option class=\"form-control table-input\">" +
 "       {{.}}"+
-"       </a>\n"+
-"</div>\n"
+"       </option>\n"+
 "{{/areas}}\n" +
-"    </div>" 
+"    </select>\n" +
+"<input type=\"submit\" value=\"查询\" >\n" +  
+"</form>"
 var itemsTemplate =
     "{{#orders}}\n" +
     "<a class=\"list-group-item list-group-item-action\" href=\"order-detail.html?id={{work_order_id}}&time={{creat_time}}&status=" + status + "\">\n" +
