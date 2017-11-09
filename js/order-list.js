@@ -104,7 +104,7 @@ var optionHeader =
 "       </option>\n"+
 "{{/areas}}\n" +
 "    </select>\n" +
-"<input type=\"submit\" value=\"查询\" onclick=\"change()\">\n" +  
+"<input type=\"submit\" value=\"查询\" onclick=\"change()\">"
 var itemsTemplate =
     "{{#orders}}\n" +
     "<a class=\"list-group-item list-group-item-action\" href=\"order-detail.html?id={{work_order_id}}&time={{creat_time}}&status=" + status + "\">\n" +
