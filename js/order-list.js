@@ -20,7 +20,7 @@ function setTitle(status) {
     var title = $('.title span');
     if (status === '30') {
         title.html("工单作业-待接单");
-        appendAreas({areas: data_areas});
+        
 
     } else if (status === '40') {
         title.html("工单作业-处理中");
@@ -67,6 +67,7 @@ function loadDataWith(status, page) {
                 orderList.push(data.data);
                 appendOrders({orders: data.data});
                 var data_areas=data.areas;
+                appendAreas({areas: data_areas});
                 if (data.data.length < data.num) {
                     hasMore = false;
                 }
