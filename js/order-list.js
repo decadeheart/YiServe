@@ -94,7 +94,6 @@ function change(){
     loadData();   
 }
 var optionHeader =
-"<form>\n" +
 "    <select id=\"selected-area\">\n" +
 "       <option selected=\"selected\" class=\"form-control table-input\"> "+
 "           全部\n" +
@@ -105,8 +104,7 @@ var optionHeader =
 "       </option>\n"+
 "{{/areas}}\n" +
 "    </select>\n" +
-"<input type=\"submit\" value=\"查询\" onclick=\"alert(1)\">\n" +  
-"</form>"
+"<input type=\"submit\" value=\"查询\" onclick=\"change()\">\n" +  
 var itemsTemplate =
     "{{#orders}}\n" +
     "<a class=\"list-group-item list-group-item-action\" href=\"order-detail.html?id={{work_order_id}}&time={{creat_time}}&status=" + status + "\">\n" +
