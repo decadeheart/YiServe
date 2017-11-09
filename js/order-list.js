@@ -126,7 +126,7 @@ function appendOrders(orders) {
     var output = Mustache.render(optionHeader, orders);
     $('.list-group').append(output);
 }
-function appendorder_areas(areas){
+function appendAreas(areas){
     var output = Mustache.render(itemsTemplate, areas);
     $('.option-header').append(output);
 }
