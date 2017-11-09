@@ -100,7 +100,7 @@ var optionHeader =
 "           全部\n" +
 "       </option>\n"+
 "{{#areas}}\n" + 
-"       <option class=\"form-control table-input\">" +
+"       <option class=\"form-control table-input\" onclick=\"alert(1)\">" +
 "       {{.}}"+
 "       </option>\n"+
 "{{/areas}}\n" +
@@ -109,7 +109,7 @@ var optionHeader =
 "</form>"
 var itemsTemplate =
     "{{#orders}}\n" +
-    "<a class=\"list-group-item list-group-item-action\" onclick=\"alert(1)\" href=\"order-detail.html?id={{work_order_id}}&time={{creat_time}}&status=" + status + "\">\n" +
+    "<a class=\"list-group-item list-group-item-action\" href=\"order-detail.html?id={{work_order_id}}&time={{creat_time}}&status=" + status + "\">\n" +
     "    <table>\n" +
     "        <tr>\n" +
     "            <td class=\"info-title\">工单编号：</td>\n" +
