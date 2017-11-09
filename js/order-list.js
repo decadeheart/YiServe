@@ -89,7 +89,7 @@ function loadDataWith(status, page) {
     );
 }
 function change(){
-    $('.list-group').remove()
+    $('.list-group').empty()
     var selectedArea=$("#selected-area").val();
     console.log(selectedArea)
     var user_id = localStorage.getItem('user_id');
