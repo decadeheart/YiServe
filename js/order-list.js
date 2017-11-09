@@ -90,9 +90,46 @@ function loadDataWith(status, page) {
 function change(){
     var selectedArea=$("#selected-area").val();
     console.log(selectedArea)
-    console.log(1)
-    loadData();   
+    var user_id = localStorage.getItem('user_id');
+    var token = localStorage.getItem('token');
+    $.post(
+        "http://120.27.27.42:8080/AndroidApp/getSelectedOrdersOverviewInfo",
+        {
+            work_order_status: status,
+            user_id: user_id,
+            token: token,
+            page: page,
+            selectedArea: selectedArea,
+        },  
+        function (data, status) {
+            loading = false;
+
+            console.log(data);
+            console.log(status);
+            if (status === 'success' && data.result === 0) {
+                data.data.forEach(function (value) {
+                    var remain = Math.floor(value.deadline - new Date().getTime() / 1000);
+                    value.deadline = secToTime(remain);
+                });
+                orderList.push(data.data);
+                appendOrders({orders: data.data});
+                if (data.data.length < data.num) {
+                    hasMore = false;
+                }
+            } else if (data.result === 101) {
+                logout();
+                location.href = 'index.html';
+                alert(data.text);
+            } else if (data.text) {
+                alert(data.text);
+            } else {
+                alert("工单信息获取失败");
+            }
+        },
+        'json'  
+        );
 }
+
 var optionHeader =
 "    <select id=\"selected-area\">\n" +
 "       <option selected=\"selected\" class=\"form-control table-input\"> "+
