@@ -94,7 +94,7 @@ function change(){
     loadData();   
 }
 var optionHeader =
-"<form action=\"https://www.baidu.com/\">\n" +
+"<form>\n" +
 "    <select id=\"selected-area\">\n" +
 "       <option selected=\"selected\" class=\"form-control table-input\"> "+
 "           全部\n" +
@@ -105,7 +105,7 @@ var optionHeader =
 "       </option>\n"+
 "{{/areas}}\n" +
 "    </select>\n" +
-"<input type=\"submit\" value=\"查询\" >\n" +  
+"<input type=\"submit\" value=\"查询\" onclick=\"alert(1)\">\n" +  
 "</form>"
 var itemsTemplate =
     "{{#orders}}\n" +
