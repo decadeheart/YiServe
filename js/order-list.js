@@ -102,7 +102,7 @@ var optionHeader =
 "</div>\n"
 "{{#areas}}\n" + 
 "<div>\n"
-"       <a href="www.baidu.com">" +
+"       <a href=\"www.baidu.com\">" +
 "       {{.}}"+
 "       </a>\n"+
 "</div>\n"
