@@ -12,6 +12,7 @@ $(document).ready(function () {
     $("#selected-area").change(function(){
         var selectedArea=$("#selected-area").val();
         console.log(selectedArea)
+        console.log(1)
         loadData();
     });   
 });
