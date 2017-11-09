@@ -68,9 +68,6 @@ function loadDataWith(status, page) {
                 appendOrders({orders: data.data});
                 var data_areas=data.areas;
                 console.log(data.areas);
-                for (let i = 0; i < data_areas.length; i++){
-                    data_areas['area'] = data_areas[i];
-                }
                 appendAreas({areas: data_areas});
                 if (data.data.length < data.num) {
                     hasMore = false;
@@ -95,7 +92,7 @@ var optionHeader =
 "       </option>\n"+
 "{{#areas}}\n" + 
 "       <option class=\"form-control table-input\">" +
-"       {{area}}"+
+"       {{.}}"+
 "       </option>\n"+
 "{{/areas}}\n" +
 "    </select>" 
