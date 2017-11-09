@@ -67,6 +67,7 @@ function loadDataWith(status, page) {
                 orderList.push(data.data);
                 appendOrders({orders: data.data});
                 var data_areas=data.areas;
+                console.log(data.areas;)
                 appendAreas({areas: data_areas});
                 if (data.data.length < data.num) {
                     hasMore = false;
@@ -124,11 +125,12 @@ var itemsTemplate =
     "{{/orders}}";
 
 function appendOrders(orders) {
-    var output = Mustache.render(optionHeader, orders);
+    var output = Mustache.render(itemsTemplate, orders);
     $('.list-group').append(output);
 }
 function appendAreas(areas){
-    var output = Mustache.render(itemsTemplate, areas);
+    var output = Mustache.render(optionHeader, areas);
+    console.log(areas)
     $('.option-header').append(output);
 }
 
