@@ -94,7 +94,7 @@ function change(){
     loadData();   
 }
 var optionHeader =
-"    <select id=\"selected-area\">\n" +
+"    <div id=\"selected-area\">\n" +
 "<div>\n"
 "       <a>\n "+
 "           全部\n" +
@@ -107,7 +107,7 @@ var optionHeader =
 "       </a>\n"+
 "</div>\n"
 "{{/areas}}\n" +
-"    </select>" 
+"    </div>" 
 var itemsTemplate =
     "{{#orders}}\n" +
     "<a class=\"list-group-item list-group-item-action\" href=\"order-detail.html?id={{work_order_id}}&time={{creat_time}}&status=" + status + "\">\n" +
