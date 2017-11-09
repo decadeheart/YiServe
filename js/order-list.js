@@ -9,13 +9,13 @@ $(document).ready(function () {
     setListener();
     loadData();
     setTitle(status);
-    console.log($("#selected-area").val())
-    $("#selected-area").change(function(){
-        var selectedArea=$("#selected-area").val();
-        console.log(selectedArea)
-        console.log(1)
-        loadData();
-    });   
+    // console.log($("#selected-area").val())
+    // $("#selected-area").change(function(){
+    //     var selectedArea=$("#selected-area").val();
+    //     console.log(selectedArea)
+    //     console.log(1)
+    //     loadData();
+    // });   
 });
 
 function setTitle(status) {
@@ -87,13 +87,19 @@ function loadDataWith(status, page) {
         'json'
     );
 }
+function change(){
+    var selectedArea=$("#selected-area").val();
+    console.log(selectedArea)
+    console.log(1)
+    loadData();   
+}
 var optionHeader =
 "    <select id=\"selected-area\">\n" +
 "       <option selected=\"selected\" class=\"form-control table-input\"> "+
 "           全部\n" +
 "       </option>\n"+
 "{{#areas}}\n" + 
-"       <option class=\"form-control table-input\">" +
+"       <option class=\"form-control table-input\" onclick=\"change()\">" +
 "       {{.}}"+
 "       </option>\n"+
 "{{/areas}}\n" +
