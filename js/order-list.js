@@ -47,6 +47,7 @@ function loadDataWith(status, page) {
     console.log('loading page: ' + page);
     var user_id = localStorage.getItem('user_id');
     var token = localStorage.getItem('token');
+
     $.post(
         "http://120.27.27.42:8080/AndroidApp/getSelectedOrdersOverviewInfo",
         {
@@ -88,6 +89,7 @@ function loadDataWith(status, page) {
     );
 }
 function change(){
+    $('.list-group').remove()
     var selectedArea=$("#selected-area").val();
     console.log(selectedArea)
     var user_id = localStorage.getItem('user_id');
