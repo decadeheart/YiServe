@@ -3,19 +3,28 @@ var page = 1;
 var loading = false;
 var hasMore = true;
 var orderList = [];
+var selectedArea = '';
 
-$(document).ready(function () {
-    setTitle(status);
+$(document).ready(function () {   
     setListener();
     loadData();
+    setTitle(status);
+    $("#selected-area").change(function(){
+        var selectedArea=$("#selected-area").val();
+        console.log(selectedArea)
+        loadData();
+    });   
 });
 
 function setTitle(status) {
     var title = $('.title span');
     if (status === '30') {
         title.html("工单作业-待接单");
+        appendAreas({areas: data_areas});
+
     } else if (status === '40') {
         title.html("工单作业-处理中");
+
     } else if (status === '50') {
         title.html("工单作业-已回复");
     } else {
@@ -42,7 +51,8 @@ function loadDataWith(status, page) {
             work_order_status: status,
             user_id: user_id,
             token: token,
-            page: page
+            page: page,
+            selectedArea: selectedArea,
         },
         function (data, status) {
             loading = false;
@@ -56,7 +66,7 @@ function loadDataWith(status, page) {
                 });
                 orderList.push(data.data);
                 appendOrders({orders: data.data});
-
+                var data_areas=data.areas;
                 if (data.data.length < data.num) {
                     hasMore = false;
                 }
@@ -73,7 +83,17 @@ function loadDataWith(status, page) {
         'json'
     );
 }
-
+var optionHeader =
+"    <select id=\"selected-area\">\n" +
+"       <option selected=\"selected\" class=\"form-control table-input\"> "+
+"           全部\n" +
+"       </option>\n"+
+"{{#areas}}\n" + 
+"       <option class=\"form-control table-input\">" +
+"       {{area}}"+
+"       </option>\n"+
+"{{/areas}}\n" +
+"    </select>" 
 var itemsTemplate =
     "{{#orders}}\n" +
     "<a class=\"list-group-item list-group-item-action\" href=\"order-detail.html?id={{work_order_id}}&time={{creat_time}}&status=" + status + "\">\n" +
@@ -92,7 +112,7 @@ var itemsTemplate =
     "        </tr>\n" +
     "        <tr>\n" +
     "            <td class=\"info-title\">地区：</td>\n" +
-    "            <td>{{area}}</td>\n" +
+    "            <td>{{order_area}}</td>\n" +
     "        </tr>\n" +
     "        <tr>\n" +
     "            <td class=\"info-title\">剩余时间：</td>\n" +
@@ -103,8 +123,12 @@ var itemsTemplate =
     "{{/orders}}";
 
 function appendOrders(orders) {
-    var output = Mustache.render(itemsTemplate, orders);
+    var output = Mustache.render(optionHeader, orders);
     $('.list-group').append(output);
+}
+function appendorder_areas(areas){
+    var output = Mustache.render(itemsTemplate, areas);
+    $('.option-header').append(output);
 }
 
 function secToTime(time) {
@@ -165,3 +189,4 @@ function logout() {
     localStorage.removeItem('user_id');
     localStorage.removeItem('user_info');
 }
+
