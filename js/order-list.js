@@ -95,13 +95,17 @@ function change(){
 }
 var optionHeader =
 "    <select id=\"selected-area\">\n" +
-"       <option selected=\"selected\" class=\"form-control table-input\"> "+
+"<div>\n"
+"       <a>\n "+
 "           全部\n" +
-"       </option>\n"+
+"       </a>\n"+
+"</div>\n"
 "{{#areas}}\n" + 
-"       <option class=\"form-control table-input\" onclick=\"console.log(1)\">" +
+"<div>\n"
+"       <a href="www.baidu.com">" +
 "       {{.}}"+
-"       </option>\n"+
+"       </a>\n"+
+"</div>\n"
 "{{/areas}}\n" +
 "    </select>" 
 var itemsTemplate =
