@@ -99,7 +99,7 @@ var optionHeader =
 "           全部\n" +
 "       </option>\n"+
 "{{#areas}}\n" + 
-"       <option class=\"form-control table-input\" onclick=\"change()\">" +
+"       <option class=\"form-control table-input\" onclick=\"change\">" +
 "       {{.}}"+
 "       </option>\n"+
 "{{/areas}}\n" +
