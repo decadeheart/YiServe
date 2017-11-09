@@ -67,7 +67,7 @@ function loadDataWith(status, page) {
                 orderList.push(data.data);
                 appendOrders({orders: data.data});
                 var data_areas=data.areas;
-                console.log(data.areas;)
+                console.log(data.areas);
                 appendAreas({areas: data_areas});
                 if (data.data.length < data.num) {
                     hasMore = false;
